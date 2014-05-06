@@ -3,7 +3,7 @@ $newline always
 <html class="no-js" lang="ja"> 
     <head>
         <meta charset="UTF-8">
-
+        <link rel=stylesheet href=http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css>
         <title>#{pageTitle pc}
         <meta name="description" content="世界最大級のjdoiサイト">
         <meta name="author" content="">
@@ -21,4 +21,6 @@ $newline always
               ^{pageBody pc}
             <footer>
                 $# #{extraCopyright $ appExtra $ settings master}
-
+        <script src=http://code.jquery.com/jquery-2.1.0.min.js>
+        <script src=http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js>
+        
