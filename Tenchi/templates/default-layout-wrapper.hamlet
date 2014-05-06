@@ -1,0 +1,24 @@
+$newline always
+\<!doctype html>
+<html class="no-js" lang="ja"> 
+    <head>
+        <meta charset="UTF-8">
+
+        <title>#{pageTitle pc}
+        <meta name="description" content="世界最大級のjdoiサイト">
+        <meta name="author" content="">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        ^{pageHead pc}
+
+        <script>
+          document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+    <body>
+        <div class="container">
+            <header>
+            <div id="main" role="main">
+              ^{pageBody pc}
+            <footer>
+                $# #{extraCopyright $ appExtra $ settings master}
+
