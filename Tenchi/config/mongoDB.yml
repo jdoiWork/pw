@@ -1,0 +1,24 @@
+Default: &defaults
+  user: Tenchi
+  password: Tenchi
+  host: localhost
+  database: Tenchi
+  connections: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: Tenchi_test
+  <<: *defaults
+
+Staging:
+  database: Tenchi_staging
+  connections: 100
+  <<: *defaults
+
+Production:
+  database: Tenchi_production
+  connections: 100
+  host: localhost
+  <<: *defaults
