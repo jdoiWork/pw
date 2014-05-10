@@ -4,10 +4,12 @@
 
 <div .col-md-6>
   <h3>ツイート
+  <div>
     <a class="twitter-timeline" href="https://twitter.com/jdoiwork" data-widget-id="465056541180063746">@jdoiwork からのツイート</a>
 
 <div .col-md-6>
   <h3>お気に入り
+  <div>
     <a class="twitter-timeline" href="https://twitter.com/jdoiwork/favorites" data-widget-id="465057300432969728">@jdoiwork のお気に入りに登録されたツイート</a>
 
 
