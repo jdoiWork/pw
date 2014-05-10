@@ -1,4 +1,12 @@
 <h1>jdoi.pw
+$maybe userEntity <- muser
+  $case userEntity
+    $of Entity uid user 
+      <p>ok #{userIdent user} 
+        <a href=@{AuthR LogoutR}>logout
+$nothing
+  <p>
+    <a href=@{AuthR LoginR}>ninsho
 
 <ul>
   <li> 知識置き場

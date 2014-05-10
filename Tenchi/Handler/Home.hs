@@ -19,23 +19,25 @@ getHomeR = do
     (formWidget, formEnctype) <- generateFormPost sampleForm
     let submission = Nothing :: Maybe (FileInfo, Text)
         handlerName = "getHomeR" :: Text
+    maid <- maybeAuthId
+    muser <- maybeAuth
     defaultLayout $ do
         aDomId <- newIdent
         setTitle "jdoi.pw"
         $(widgetFile "homepage")
 
-postHomeR :: Handler Html
-postHomeR = do
-    ((result, formWidget), formEnctype) <- runFormPost sampleForm
-    let handlerName = "postHomeR" :: Text
-        submission = case result of
-            FormSuccess res -> Just res
-            _ -> Nothing
-
-    defaultLayout $ do
-        aDomId <- newIdent
-        setTitle "Welcome To Yesod!"
-        $(widgetFile "homepage")
+--postHomeR :: Handler Html
+--postHomeR = do
+    --((result, formWidget), formEnctype) <- runFormPost sampleForm
+    --let handlerName = "postHomeR" :: Text
+        --submission = case result of
+            --FormSuccess res -> Just res
+            --_ -> Nothing
+        --jjjj = "jdoi" :: Text
+    --defaultLayout $ do
+        --aDomId <- newIdent
+        --setTitle "Welcome To Yesod!"
+        -- $(widgetFile "homepage")
 
 sampleForm :: Form (FileInfo, Text)
 sampleForm = renderDivs $ (,)
