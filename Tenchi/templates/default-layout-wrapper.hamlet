@@ -15,6 +15,7 @@ $newline always
         <script>
           document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
     <body>
+        ^{pageBody nav}
         <div class="container">
             <header>
             <div id="main" role="main">

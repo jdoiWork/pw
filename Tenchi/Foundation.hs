@@ -6,6 +6,7 @@ import Yesod.Static
 import Yesod.Auth
 import Yesod.Auth.BrowserId
 import Yesod.Auth.GoogleEmail
+import Yesod.Auth.Message (japaneseMessage)
 import Yesod.Default.Config
 import Yesod.Default.Util (addStaticContentExternal)
 import Network.HTTP.Client.Conduit (Manager, HasHttpManager (getHttpManager))
@@ -19,6 +20,8 @@ import Model
 import Text.Jasmine (minifym)
 import Text.Hamlet (hamletFile)
 import Yesod.Core.Types (Logger)
+import Data.Maybe (isJust)
+import Control.Applicative ((<$>))
 
 -- | The site argument for your application. This can be a good place to
 -- keep settings and values requiring initialization before your application
@@ -61,9 +64,11 @@ instance Yesod App where
         120    -- timeout in minutes
         "config/client_session_key.aes"
 
+    isAuthorized _ _ = return Authorized
     defaultLayout widget = do
         master <- getYesod
         mmsg <- getMessage
+        isAuth <- isJust <$> maybeAuthId
 
         -- We break up the default layout into two components:
         -- default-layout is the contents of the body tag, and
@@ -78,6 +83,7 @@ instance Yesod App where
                 ])
             
             $(widgetFile "default-layout")
+        nav <- widgetToPageContent $(widgetFile "nav")
         giveUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
 
     -- This is done to provide an optimization for serving static files from
@@ -138,7 +144,8 @@ instance YesodAuth App where
     authPlugins _ = [authBrowserId def, authGoogleEmail]
 
     authHttpManager = httpManager
-
+    --maybeAuthId = return Nothing
+    renderAuthMessage _ _ = japaneseMessage
 -- This instance is required to use forms. You can modify renderMessage to
 -- achieve customized and internationalized form validation messages.
 instance RenderMessage App FormMessage where
