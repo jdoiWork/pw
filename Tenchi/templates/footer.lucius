@@ -1,0 +1,14 @@
+.dl-horizontal dt
+{
+  white-space: normal;
+  width: 15em;
+  margin-right: 1em;
+
+}
+
+footer
+{
+   margin-top: 4em;
+
+
+}

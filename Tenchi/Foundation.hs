@@ -84,6 +84,7 @@ instance Yesod App where
             
             $(widgetFile "default-layout")
         nav <- widgetToPageContent $(widgetFile "nav")
+        footer <- widgetToPageContent $(widgetFile "footer")
         giveUrlRenderer $(hamletFile "templates/default-layout-wrapper.hamlet")
 
     -- This is done to provide an optimization for serving static files from

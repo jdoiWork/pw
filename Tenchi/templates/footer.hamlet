@@ -1,0 +1,19 @@
+<dl .dl-horizontal>
+  <dt>&copy;
+  <dd>2014 jdoi
+
+  <dt>Programming Language
+  <dd>
+    <a href=http://www.haskell.org>Haskell
+
+  <dt>Web Framework
+  <dd>
+    <a href=http://www.yesodweb.com>Yesod
+
+  <dt>Web Server
+  <dd>
+    <a href=http://www.mew.org/~kazu/proj/mighttpd/en/>Mighttpd2
+
+  <dt>Main CSS
+  <dd>
+    <a href=http://getbootstrap.com/>Bootstrap

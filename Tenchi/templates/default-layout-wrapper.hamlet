@@ -11,6 +11,7 @@ $newline always
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
         ^{pageHead pc}
+        ^{pageHead footer}
 
         <script>
           document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
@@ -21,6 +22,7 @@ $newline always
             <div id="main" role="main">
               ^{pageBody pc}
             <footer>
+                ^{pageBody footer}
                 $# #{extraCopyright $ appExtra $ settings master}
         <script src=http://code.jquery.com/jquery-2.1.0.min.js>
         <script src=http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js>
