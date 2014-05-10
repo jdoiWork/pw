@@ -1,0 +1,17 @@
+<h1>about
+<h2>twitter 
+  <a href=https://twitter.com/jdoiwork>@jdoiwork
+
+<div .col-md-6>
+  <h3>ツイート
+    <a class="twitter-timeline" href="https://twitter.com/jdoiwork" data-widget-id="465056541180063746">@jdoiwork からのツイート</a>
+
+<div .col-md-6>
+  <h3>お気に入り
+    <a class="twitter-timeline" href="https://twitter.com/jdoiwork/favorites" data-widget-id="465057300432969728">@jdoiwork のお気に入りに登録されたツイート</a>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<h2>GitHub 
+  <a href=https://github.com/jdoiWork>@jdoiWork
