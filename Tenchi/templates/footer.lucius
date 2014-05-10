@@ -3,6 +3,12 @@
   white-space: normal;
   width: 15em;
   margin-right: 1em;
+}
+
+.dl-horizontal
+{
+
+  /* background-color: pink; */
 
 }
 

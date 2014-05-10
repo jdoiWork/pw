@@ -1,4 +1,5 @@
-<dl .dl-horizontal>
+<dl .col-sm-6 .dl-horizontal .col-md-5 .col-lg-4
+    .col-sm-offset-6 .col-md-offset-7 .col-lg-offset-8>
   <dt>&copy;
   <dd>2014 jdoi
 
@@ -14,6 +15,3 @@
   <dd>
     <a href=http://www.mew.org/~kazu/proj/mighttpd/en/>Mighttpd2
 
-  <dt>Main CSS
-  <dd>
-    <a href=http://getbootstrap.com/>Bootstrap
