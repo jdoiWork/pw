@@ -17,6 +17,7 @@ import Control.Applicative
 import Settings.Development
 import Data.Default (def)
 import Text.Hamlet
+import Yesod.Fay
 
 -- | Which Persistent backend this site is using.
 type PersistConf = MongoConf
@@ -64,6 +65,17 @@ widgetFile :: String -> Q Exp
 widgetFile = (if development then widgetFileReload
                              else widgetFileNoReload)
               widgetFileSettings
+
+fayFile' :: Exp -> FayFile
+fayFile' staticR moduleName
+    | development = fayFileReload settings
+    | otherwise   = fayFileProd settings
+  where
+    settings = (yesodFaySettings moduleName)
+        { yfsSeparateRuntime = Just ("static", staticR)
+        -- , yfsPostProcess = readProcess "java" ["-jar", "closure-compiler.jar"]
+        , yfsExternal = Just ("static", staticR)
+        }
 
 data Extra = Extra
     { extraCopyright :: Text

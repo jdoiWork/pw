@@ -1,8 +1,11 @@
 /static StaticR Static getStatic
 /auth   AuthR   Auth   getAuth
+/fay-command FaySiteR FaySite getFaySite
 
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
 / HomeR GET -- POST
 /about AboutR GET
+/person PersonR GET
+

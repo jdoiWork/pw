@@ -19,7 +19,10 @@ import Settings (widgetFile, Extra (..))
 import Model
 import Text.Jasmine (minifym)
 import Text.Hamlet (hamletFile)
+import Yesod.Fay
 import Yesod.Core.Types (Logger)
+
+-- 追加import
 import Data.Maybe (isJust)
 import Control.Applicative ((<$>))
 
@@ -33,6 +36,7 @@ data App = App
     , connPool :: Database.Persist.PersistConfigPool Settings.PersistConf -- ^ Database connection pool.
     , httpManager :: Manager
     , persistConfig :: Settings.PersistConf
+    , fayCommandHandler :: CommandHandler App
     , appLogger :: Logger
     }
 
@@ -101,7 +105,8 @@ instance Yesod App where
     -- expiration dates to be set far in the future without worry of
     -- users receiving stale content.
     addStaticContent =
-        addStaticContentExternal minifym genFileName Settings.staticDir (StaticR . flip StaticRoute [])
+        addStaticContentExternal Right genFileName Settings.staticDir (StaticR . flip StaticRoute [])
+        -- addStaticContentExternal minifym genFileName Settings.staticDir (StaticR . flip StaticRoute [])
       where
         -- Generate a unique filename based on the content itself
         genFileName lbs
@@ -117,6 +122,15 @@ instance Yesod App where
         development || level == LevelWarn || level == LevelError
 
     makeLogger = return . appLogger
+
+instance YesodJquery App
+instance YesodFay App where
+
+    fayRoute = FaySiteR
+
+    yesodFayCommand render command = do
+        master <- getYesod
+        fayCommandHandler master render command
 
 -- How to run database actions.
 instance YesodPersist App where
