@@ -17,6 +17,7 @@ import Network.Wai.Middleware.RequestLogger
 import qualified Network.Wai.Middleware.RequestLogger as RequestLogger
 import qualified Database.Persist
 import Network.HTTP.Client.Conduit (newManager)
+import Yesod.Fay (getFaySite)
 import Control.Concurrent (forkIO, threadDelay)
 import System.Log.FastLogger (newStdoutLoggerSet, defaultBufSize, flushLogStr)
 import Network.Wai.Logger (clockDateCacher)
@@ -25,6 +26,7 @@ import Yesod.Core.Types (loggerSet, Logger (Logger))
 
 -- Import all relevant handler modules here.
 -- Don't forget to add new modules to your cabal file!
+import Handler.Fay
 import Handler.Home
 import Handler.About
 
@@ -81,7 +83,7 @@ makeFoundation conf = do
     _ <- forkIO updateLoop
 
     let logger = Yesod.Core.Types.Logger loggerSet' getter
-        foundation = App conf s p manager dbconf logger
+        foundation = App conf s p manager dbconf onCommand logger
 
     return foundation
 

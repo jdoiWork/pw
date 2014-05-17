@@ -4,3 +4,12 @@
   <li> 知識置き場
   <li> タスククエスト
   <li> 参考文献マップ
+  <li>
+    Let's test out some Fay! Enter a number in this box and we'll calculate the Fibonacci value.
+    <input #fibindex placeholder="Fibonacci Index">
+    <span #fibresult>
+  <li>
+    <input #hoge>hello
+
+<div ng-controller=HomeCtrl>
+   {{home.name}}
