@@ -11,7 +11,13 @@ import FFI
 --import Language.Fay.FFI
 #endif
 
+data MyAddr = MyAddr
+            { maName :: String
+            , maMail :: String
+            } deriving (Show, Read, Typeable, Data)
+
 data Command = GetFib Int (Returns Int)
              | GetHoge (Returns Text)
+             | GetMyAddr (Returns MyAddr)
                deriving (Read, Typeable, Data)
 

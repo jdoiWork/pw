@@ -15,12 +15,13 @@ import Settings.Development (development)
 import qualified Database.Persist
 import Settings.StaticFiles
 import Database.Persist.MongoDB hiding (master)
-import Settings (widgetFile, Extra (..))
+import Settings (widgetFile, Extra (..), fayFile')
 import Model
 import Text.Jasmine (minifym)
 import Text.Hamlet (hamletFile)
 import Yesod.Fay
 import Yesod.Core.Types (Logger)
+import Language.Haskell.TH ( Exp(..) )
 
 -- 追加import
 import Data.Maybe (isJust)
@@ -86,6 +87,7 @@ instance Yesod App where
                 -- , css_bootstrap_css
                 ])
             
+            $(fayFile' (ConE 'StaticR) "DefaultLayout")
             $(widgetFile "default-layout")
         nav <- widgetToPageContent $(widgetFile "nav")
         footer <- widgetToPageContent $(widgetFile "footer")

@@ -12,4 +12,5 @@ onCommand render command =
     case readFromFay command of
       Just (GetFib index r) -> render r $ fibs !! index
       Just (GetHoge      r) -> render r $ "Hoge"
+      Just (GetMyAddr    r) -> render r $ MyAddr "name dayo" "mail dayo"
       Nothing               -> invalidArgs ["Invalid command"]

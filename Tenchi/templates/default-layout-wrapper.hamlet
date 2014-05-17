@@ -1,6 +1,6 @@
 $newline always
 \<!doctype html>
-<html class="no-js" lang="ja"> 
+<html class="no-js" lang="ja" ng-app=JdoiApp> 
     <head>
         <meta charset="UTF-8">
         <link rel=stylesheet href=http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css>
@@ -15,6 +15,7 @@ $newline always
 
         <script>
           document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+        <script src=http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js>
     <body>
         ^{pageBody nav}
         <div class="container">
