@@ -11,4 +11,5 @@ onCommand :: CommandHandler App
 onCommand render command =
     case readFromFay command of
       Just (GetFib index r) -> render r $ fibs !! index
+      Just (GetHoge      r) -> render r $ "Hoge"
       Nothing               -> invalidArgs ["Invalid command"]

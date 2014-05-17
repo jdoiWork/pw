@@ -12,5 +12,6 @@ import FFI
 #endif
 
 data Command = GetFib Int (Returns Int)
-    deriving (Read, Typeable, Data)
+             | GetHoge (Returns Text)
+               deriving (Read, Typeable, Data)
 

@@ -123,7 +123,9 @@ instance Yesod App where
 
     makeLogger = return . appLogger
 
-instance YesodJquery App
+instance YesodJquery App where
+    urlJqueryJs _ = Right "http://code.jquery.com/jquery-2.1.0.min.js"
+
 instance YesodFay App where
 
     fayRoute = FaySiteR
