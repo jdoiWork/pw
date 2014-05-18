@@ -12,4 +12,4 @@
     <input #hoge>hello
 
 <div ng-controller=HomeCtrl>
-   {{home.name}}
+   {{home.name}} {{hoge}}
