@@ -57,17 +57,53 @@ tisikiItems =
         "Video Lectures | Structure and Interpretation of Computer Programs | Electrical Engineering and Computer Science | MIT OpenCourseWare"
         "http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/"
   , TisikiItem
-        ""
-        ""
+        "YesodBookJp :: Licensed by Meatware"
+        "http://melpon.org/yesodbookjp"
   , TisikiItem
-        ""
-        ""
+        "HTML5 Boilerplate: The web's most popular front-end template"
+        "http://html5boilerplate.com/"
   , TisikiItem
-        ""
-        ""
+        "Disqus – The Web’s Community of Communities"
+        "http://disqus.com/"
   , TisikiItem
-        ""
-        ""
+        "Mighttpd"
+        "http://mew.org/~kazu/proj/mighttpd/en/"
+  , TisikiItem
+        "Normalize.css: Make browsers render all elements more consistently."
+        "http://necolas.github.io/normalize.css/"
+  , TisikiItem
+        "05. Yesod - とりあえず雑記帳"
+        "https://sites.google.com/site/toriaezuzakki/haskell/yesod"
+  , TisikiItem
+        "Quill - An Open Source Rich Text Editor with an API"
+        "http://quilljs.com/"
+  , TisikiItem
+        "Bootstrap :: Cupid"
+        "http://bootstraptheme.com/bootswatch/cupid/"
+  , TisikiItem
+        "さらば愛しき JavaScript —— 愛と欲望の果てに Haskell は fay と出逢う。 - これは圏です"
+        "http://blog.konn-san.com/article/20121225/fay-introduction"
+  , TisikiItem
+        "Yesod, AngularJS and Fay"
+        "http://www.yesodweb.com/blog/2012/10/yesod-fay-js"
+  , TisikiItem
+        "Pure"
+        "http://purecss.io/"
+  , TisikiItem
+        "Eight Terminal Utilities Every OS X Command Line User Should Know mitchchn.me"
+        "http://www.mitchchn.me/2014/os-x-terminal/"
+  , TisikiItem
+        "How to get function parameter names/values dynamically from javascript - Stack Overflow"
+        "http://stackoverflow.com/questions/1007981/how-to-get-function-parameter-names-values-dynamically-from-javascript"
+  , TisikiItem
+        "angularjs - Angular Element&#39;s Scope not working as expected - Stack Overflow"
+        "http://stackoverflow.com/questions/20079267/angular-elements-scope-not-working-as-expected"
+  , TisikiItem
+        "debug - Rails4 今のところ最強なデバッグツール達 - Qiita"
+        "http://qiita.com/yusabana/items/8ce54577d959bb085b37"
+  , TisikiItem
+        "YesodからCoffeeScriptを使う - DRascal.com"
+        "http://drascal.com/blog/article/5"
   ]
 
 onCommand :: CommandHandler App
