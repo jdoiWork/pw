@@ -1,7 +1,8 @@
-<h1>tisiki
-<div ng-contorller=TisikiCtrl>
-  <dl>
-    <dt ng-repeart-start="item in items">
-      {{item.title}}
-    <dd ng-repeat-end>
-      <a href="{{item.url}}">{{item.url}}
+<h1>知識
+<div ng-controller=TisikiCtrl>
+  {{tisiki}}
+  <div ng-repeat="item in items">
+    <h2> 
+      {{item.tiTitle}}
+    <p>
+      <a href="{{item.tiUrl}}">{{item.tiUrl}}
