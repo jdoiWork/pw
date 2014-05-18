@@ -9,3 +9,4 @@
 /about AboutR GET
 /person PersonR GET
 
+/tisiki TisikiR GET

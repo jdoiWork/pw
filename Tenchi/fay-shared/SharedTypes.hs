@@ -16,8 +16,12 @@ data MyAddr = MyAddr
             , maMail :: String
             } deriving (Show, Read, Typeable, Data)
 
+data TisikiItem = TisikiItem
+                { tiTitle :: String
+                , tiUrl :: String
+                } deriving (Show, Read, Typeable, Data)
+
 data Command = GetFib Int (Returns Int)
-             | GetHoge (Returns Text)
-             | GetMyAddr (Returns MyAddr)
+             | GetTisikiItems (Returns [TisikiItem])
                deriving (Read, Typeable, Data)
 
