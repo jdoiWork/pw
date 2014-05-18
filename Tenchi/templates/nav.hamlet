@@ -10,6 +10,8 @@
       <ul .nav .navbar-nav>
         <li>
           <a href=@{AboutR}>about
+        <li>
+          <a href=@{TisikiR}>tisiki
       <ul .nav .navbar-nav .navbar-right>
         <li>
           $if isAuth

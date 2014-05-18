@@ -1,0 +1,7 @@
+<h1>tisiki
+<div ng-contorller=TisikiCtrl>
+  <dl>
+    <dt ng-repeart-start="item in items">
+      {{item.title}}
+    <dd ng-repeat-end>
+      <a href="{{item.url}}">{{item.url}}
