@@ -2,12 +2,10 @@
 {-# LANGUAGE EmptyDataDecls    #-}
 module DefaultLayout where
 
-import Prelude
+-- import Prelude
 import Fay.FFI
-import Language.Fay.Yesod
-import SharedTypes
-
-data Element
+-- import Language.Fay.Yesod
+-- import SharedTypes
 
 createNgApp :: Fay ()
 createNgApp = ffi "app = angular.module('JdoiApp', [])"

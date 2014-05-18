@@ -1,15 +1,7 @@
 <h1>jdoi.pw
 
-<ul>
-  <li> 知識置き場
-  <li> タスククエスト
-  <li> 参考文献マップ
-  <li>
-    Let's test out some Fay! Enter a number in this box and we'll calculate the Fibonacci value.
-    <input #fibindex placeholder="Fibonacci Index">
-    <span #fibresult>
-  <li>
-    <input #hoge>hello
-
-<div ng-controller=HomeCtrl>
-   {{home.name}} {{hoge}}
+<ul .list-group>
+  <li .list-group-item>
+    <a href=@{TisikiR}>知識置き場
+  <li .list-group-item> タスククエスト
+  <li .list-group-item> 参考文献マップ

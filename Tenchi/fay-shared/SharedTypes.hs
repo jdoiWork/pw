@@ -22,8 +22,6 @@ data TisikiItem = TisikiItem
                 } deriving (Show, Read, Typeable, Data)
 
 data Command = GetFib Int (Returns Int)
-             | GetHoge (Returns Text)
-             | GetMyAddr (Returns MyAddr)
              | GetTisikiItems (Returns [TisikiItem])
                deriving (Read, Typeable, Data)
 

@@ -109,8 +109,6 @@ tisikiItems =
 onCommand :: CommandHandler App
 onCommand render command =
     case readFromFay command of
-      Just (GetFib index r) -> render r $ fibs !! index
-      Just (GetHoge      r) -> render r $ "Hoge"
-      Just (GetMyAddr    r) -> render r $ MyAddr "name dayo" "mail dayo"
+      Just (GetFib index r) -> render r $ 1 -- fibs !! index
       Just (GetTisikiItems r) -> render r $ tisikiItems
       Nothing               -> invalidArgs ["Invalid command"]

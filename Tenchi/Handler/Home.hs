@@ -26,7 +26,7 @@ getHomeR = do
         aDomId <- newIdent
         setTitle "jdoi.pw"
         $(widgetFile "homepage")
-        $(fayFile' (ConE 'StaticR) "Home")
+        -- $(fayFile' (ConE 'StaticR) "Home")
 
 --postHomeR :: Handler Html
 --postHomeR = do
