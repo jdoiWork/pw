@@ -1,6 +1,7 @@
 <h1>jdoi.pw
 
-<ul>
-  <li> 知識置き場
-  <li> タスククエスト
-  <li> 参考文献マップ
+<ul .list-group>
+  <li .list-group-item>
+    <a href=@{TisikiR}>知識置き場
+  <li .list-group-item> タスククエスト
+  <li .list-group-item> 参考文献マップ

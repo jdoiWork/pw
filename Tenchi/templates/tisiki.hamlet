@@ -1,0 +1,13 @@
+<h1>知識
+<div .form-group>
+  <div .input-group>
+    <span .input-group-addon>
+      <span .glyphicon .glyphicon-search>
+    <input type=text .form-control ng-model=searchText>
+<div ng-controller=TisikiCtrl>
+  {{tisiki}}
+  <div ng-repeat="item in items | filter: searchText">
+    <h2> 
+      {{item.tiTitle}}
+    <p>
+      <a href="{{item.tiUrl}}">{{item.tiUrl}}
