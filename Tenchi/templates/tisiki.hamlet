@@ -9,5 +9,8 @@
   <div ng-repeat="item in items | filter: searchText">
     <h2> 
       {{item.tiTitle}}
+    <div>
+      <span .label .label-default ng-repeat="tag in item.tiTags" style="margin-right:0.5em;">
+        {{tag}}
     <p>
       <a href="{{item.tiUrl}}">{{item.tiUrl}}

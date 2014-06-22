@@ -19,6 +19,7 @@ data MyAddr = MyAddr
 data TisikiItem = TisikiItem
                 { tiTitle :: String
                 , tiUrl :: String
+                , tiTags :: [String]
                 } deriving (Show, Read, Typeable, Data)
 
 data Command = GetFib Int (Returns Int)
