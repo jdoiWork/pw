@@ -3,10 +3,12 @@ module Handler.Fay where
 import Import
 import Yesod.Fay
 import Fay.Convert (readFromFay)
+import qualified Data.Text as T
 
 fibs :: [Int]
 fibs = 0 : 1 : zipWith (+) fibs (drop 1 fibs)
 
+tisikiItems :: [TisikiItem]
 tisikiItems = 
   [ TisikiItem
         "Creative Web Typography Styles | Codrops"
@@ -138,9 +140,24 @@ tisikiItems =
         ["haskell", "yesod", "javascript", "coffeescript"]
   ]
 
+toString = T.unpack
+
+tisikiItemsFromDb :: Handler [TisikiItem]
+tisikiItemsFromDb = do 
+    tisikis <- runDB $ selectList [] []
+    let tis = do
+        (Entity _ tisiki) <- tisikis
+        let (Tisiki title uri tags) = tisiki
+        return $ TisikiItem (toString title) (toString uri) (map toString tags)
+    return tis    
+
 onCommand :: CommandHandler App
 onCommand render command =
     case readFromFay command of
-      Just (GetFib index r) -> render r $ 1 -- fibs !! index
-      Just (GetTisikiItems r) -> render r $ tisikiItems
+      -- Just (GetFib index r) -> render r $ 1 -- fibs !! index
+      Just (GetFib _ r) -> render r $ 1 -- fibs !! index
+      Just (GetTisikiItems r) -> do
+        tis <- tisikiItemsFromDb
+        render r $ tis -- tisikiItems
       Nothing               -> invalidArgs ["Invalid command"]
+
